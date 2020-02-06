@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>A11y workshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Accessibility workshop</h2>
+
+  <ul>
+    <li><a href="index.html">FAKE MENU |</a></li>
+    <li><a href="index.html">PROBABLY STILL FIXABLE |</a></li>
+    <li><a href="index.html">OH LOOK A SEARCH BOX |</a></li>
+    <li><input type="text" value="Search me!"> <a>🔎</a></li>
+  </ul>
+
+  <div class="header">Workshop objective</div>
+
+  <p id="text">Your objective is to eliminate as many accessibility issues on this website as possible.</p>
+
+  <p id="text">To proceed with the workshop you will need:<br>
+  &nbsp;&nbsp;- web browser<br>
+  &nbsp;&nbsp;- screen reader:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- for Windows: <a href="https://www.nvaccess.org/download/">NVDA</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- for MacOS: VoiceOver (built-in)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- for any OS with Chrome browser: <a href="https://www.chromevox.com/">ChromeVox</a> extension<br>
+  &nbsp;&nbsp;- Axe test framework; you can choose one from:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">extension for Chrome</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/">extension for Firefox</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-cli">Axe CLI - for use in command line (you will have to run your own webserver locally to serve the website, so this is more advanced option)</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-core">Axe Core - version for bundling as website script</a><br>
+  </p>
+
+  <h2>Below are some components you may or may not have to fix</h2>
+
+  <a class="button">This is a button</a> <button class="button">And this is a button</button>
+
+  <form>
+    Name: <input type="text"><br>
+    Surname: <input type="text"><br>
+    <input type="checkbox"> It doesn't send anything anywhere but please still confirm you're ok with that<br><br>
+    <span id="submit-button">Submit</span>
+  </form>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
