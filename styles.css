@@ -6,6 +6,10 @@ body {
     background-color: lightyellow;
 }
 
+a {
+    outline: none;
+}
+
 .header, h2, a {
     color: #00aeae;
     text-decoration: none;
