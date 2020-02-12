@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>A11y workshop</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="switchery.min.css">
 </head>
 <body>
   <h2>Accessibility workshop</h2>
@@ -32,17 +33,30 @@
     &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-core">Axe Core - version for bundling as website script</a><br>
   </p>
 
+  <p>Some basic guidelines:
+    <ol>
+      <li>Keep notes of your findings and how you fixed them</li>
+      <li>Try to navigate the website with the screen reader and notice how the content is structured in a content navigator / rotor</li>
+      <li>Check how this site responds to navigating with a keyboard</li>
+      <li>Run the Axe against it to see if there are any issues and try to remove them</li>
+      <li>If you notice any other issues - feel free to remove those as well.</li>
+    </ol>
+  </p>
+
   <h2>Below are some components you may or may not have to fix</h2>
+
+  <img src="http://placekitten.com/500/300"><br />
 
   <a class="button">This is a button</a> <button class="button">And this is a button</button>
 
   <form>
     Name: <input type="text"><br>
     Surname: <input type="text"><br>
-    <input type="checkbox"> It doesn't send anything anywhere but please still confirm you're ok with that<br><br>
+    <input type="checkbox" class="js-switch"> It doesn't send anything anywhere but please still confirm you're ok with that<br><br>
     <span id="submit-button">Submit</span>
   </form>
 
+  <script src="switchery.min.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>

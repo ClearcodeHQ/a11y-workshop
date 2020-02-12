@@ -12,3 +12,6 @@ for(var z = 0; z < buttons.length; z++) {
     return false;
   };
 }
+
+var elem = document.querySelector('.js-switch');
+var init = new Switchery(elem);
