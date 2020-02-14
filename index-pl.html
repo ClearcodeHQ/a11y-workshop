@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Warsztaty a11y</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="switchery.min.css">
+</head>
+<body>
+  <h2>Warsztaty accessibility</h2>
+
+  <ul>
+    <li><a href="index.html">NIEPRAWDZIWE MENU |</a></li>
+    <li><a href="index.html">PEWNIE DA SIĘ NAPRAWIĆ |</a></li>
+    <li><a href="index.html">O ZOBACZ SZUKAJKA |</a></li>
+    <li><input type="text" value="Szukaj!"> <a>🔎</a></li>
+  </ul>
+
+  <div class="header">Cele warsztatu</div>
+
+  <p id="text">Twoim celem jest wyeliminowanie jak największej liczby problemów z dostępnością na tej stronie.</p>
+
+  <p id="text">Do wykonania warsztatu będziesz potrzebować:<br>
+  &nbsp;&nbsp;- przeglądarki WWW<br>
+   &nbsp;- screen readera:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- dla Windows: <a href="https://www.nvaccess.org/download/" target="_blank">NVDA</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- dla MacOS: VoiceOver (wbudowany)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- dowolny system z przeglądarką Chrome: rozszerzenie <a href="https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en" target="_blank">ChromeVox</a><br>
+  &nbsp;&nbsp;- framework testowy Axe; możesz wybrać dowolny z poniższych:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/" target="_blank">rozszerzenie dla Firefox</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US" target="_blank">rozszerzenie dla Chrome - wymaga uruchomienia webserwera, nie działa na lokalnych plikach</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-cli" target="_blank">Axe CLI - uruchamiany z wiersza poleceń, wymaga uruchomienia webserwera, nie działa na lokalnych plikach</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-core" target="_blank">Axe Core - wersja do umieszczenia na stronie, do użycia z frameworkiem testowym</a><br>
+  </p>
+
+  <p>Kilka słów na temat wyboru oprogramowania:</p>
+
+  <p>Istnieje screen reader dla Linuxa - Orca, ale próg wejścia jest nieco zbyt wysoki aby łatwo użyć go w tych warsztatach, a ponadto brakuje mu trybu wyświetlania czytanego tekstu dla debugowania. Zamiast tego można użyć rozszerzenia ChromeVox, jednak pamiętaj, że działa ono wyłącznie w Chrome - nie w Chromium. Jeśli używasz Linuxa i nie chcesz instalować Chrome - pomiń testy z użyciem screen readera.</p>
+
+  <p>Z drugiej strony, Axe dla Firefoksa pozwala na testowanie plików lokalnych, wersja dla Chrome wymaga użycia webserwera lub opublikowania plików online (jeżeli chcesz skorzystać z tej możliwości - dla nas najwygodniejszy okazał się <a href="http://glitch.com" target="_blank">glitch.com</a>).</p>
+
+  <p>Kilka podstawowych porad:
+    <ol>
+      <li>Notuj znalezione błędy i sposób ich rozwiązania (jeśli nie znajdziesz rozwiązania - zanotuj błąd tak czy inaczej)</li>
+      <li>Spróbuj przejść przez treść strony za pomocą readera, zwróć uwagę na to jak strona jest pokazana w nawigatorze/rotorze</li>
+      <li>Sprawdź jak strona reaguje na nawigowanie za pomocą klawiatury</li>
+      <li>Uruchom Axe aby sprawdzić jakie błędy zostaną wykryte i spróbuj je poprawić</li>
+      <li>Jeśli zauważysz jakiekolwiek inne problemy - zanotuj je i spróbuj poprawić</li>
+    </ol>
+  </p>
+
+  <h2>Poniżej znajduje się kilka komponentów które mogą wymagać poprawienia</h2>
+
+  <img src="http://placekitten.com/500/300"><br />
+
+  <a class="button">To jest przycisk</a> <button class="button">I to jest przycisk</button>
+
+  <form>
+    Imię: <input type="text"><br>
+    Nazwisko: <input type="text"><br>
+    <input type="checkbox" class="js-switch"> Formularz nie jest nigdzie wysyłany, ale zaznacz checkbox żeby potwierdzić że się zgadzasz<br><br>
+    <span id="submit-button">Wyślij</span>
+  </form>
+
+  <script src="switchery.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

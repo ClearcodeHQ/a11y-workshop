@@ -23,19 +23,25 @@
   <p id="text">To proceed with the workshop you will need:<br>
   &nbsp;&nbsp;- web browser<br>
   &nbsp;&nbsp;- screen reader:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;- for Windows: <a href="https://www.nvaccess.org/download/">NVDA</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- for Windows: <a href="https://www.nvaccess.org/download/" target="_blank">NVDA</a><br>
     &nbsp;&nbsp;&nbsp;&nbsp;- for MacOS: VoiceOver (built-in)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;- for any OS with Chrome browser: <a href="https://www.chromevox.com/">ChromeVox</a> extension<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- for any OS with Chrome browser: <a href="https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en" target="_blank">ChromeVox</a> extension<br>
   &nbsp;&nbsp;- Axe test framework; you can choose one from:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">extension for Chrome</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/">extension for Firefox</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-cli">Axe CLI - for use in command line (you will have to run your own webserver locally to serve the website, so this is more advanced option)</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-core">Axe Core - version for bundling as website script</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/" target="_blank">extension for Firefox</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US" target="_blank">extension for Chrome - requires the website being run in a webserver</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-cli" target="_blank">Axe CLI - for use in command line, requires the website being run in a webserver</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://github.com/dequelabs/axe-core" target="_blank">Axe Core - version for bundling as website script, has to be used with a test framework</a><br>
   </p>
+
+  <p>A few words on software choice.</p>
+
+  <p>There's a screen reader for Linux called Orca, but using it has a bit high learning curve for this workshop and doesn't have an option to show the text for debugging instead of reading it out. ChromeVox extension can be used instead, but keep in mind that it only works in Chrome - not in Chromium! If you are using Linux and don't want to install Chrome, skip the screen reader step.</p>
+
+  <p>Conversely, Axe for Firefox can be used on local files, in Chrome you will have to set up a webserver or publish the website somewhere (if you want to - the most convenient way we've found was to put the files on <a href="http://glitch.com" target="_blank">glitch.com</a>).</p>
 
   <p>Some basic guidelines:
     <ol>
-      <li>Keep notes of your findings and how you fixed them</li>
+      <li>Keep notes of your findings and how you fixed them (even if you didn't fix them - note them)</li>
       <li>Try to navigate the website with the screen reader and notice how the content is structured in a content navigator / rotor</li>
       <li>Check how this site responds to navigating with a keyboard</li>
       <li>Run the Axe against it to see if there are any issues and try to remove them</li>
